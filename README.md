@@ -1,6 +1,6 @@
 # Discord Music Bot (Updated for discord.js v14)
 
-![Discord Bot](https://img.shields.io/badge/discord.js-v14-7289DA?style=for-the-badge&logo=discord&logoColor=white)  
+![Discord Bot](https://img.shields.io/badge/discord.js-v14-7289DA?style=for-the-badge&logo=discord&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-20.x-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
 ---
@@ -12,18 +12,18 @@ This is a powerful and up-to-date music bot for Discord, built with the latest t
 The primary goal of this bot is to provide a simple, seamless, and high-quality music experience on Discord with minimal setup and intuitive commands.
 
 ### Key Features
-- **High-Quality Audio**: Streams directly from YouTube using `@distube/ytdl-core` to provide the best possible audio quality.  
-- **Modern and Stable**: Built on the latest `discord.js` v14, ensuring compatibility with the most recent Discord API updates and features.  
-- **Simple and Intuitive Commands**: A straightforward command structure that is easy for any user to learn and operate.  
-- **Secure by Design**: Utilizes a `config.json` file for the bot's token, keeping sensitive credentials separate from the main codebase.  
+- **High-Quality Audio**: Streams directly from YouTube using `@distube/ytdl-core` to provide the best possible audio quality.
+- **Modern and Stable**: Built on the latest `discord.js` v14, ensuring compatibility with the most recent Discord API updates and features.
+- **Simple and Intuitive Commands**: A straightforward command structure that is easy for any user to learn and operate.
+- **Secure by Design**: Utilizes a `config.json` file for the bot's token, keeping sensitive credentials separate from the main codebase.
 
 ---
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed on your system:  
-- [Node.js](https://nodejs.org/) (version 20.x or newer is recommended)  
-- [Git](https://git-scm.com/)  
+Before you begin, ensure you have the following installed on your system:
+- [Node.js](https://nodejs.org/) (version 20.x or newer is recommended)
+- [Git](https://git-scm.com/)
 
 ---
 
@@ -43,11 +43,12 @@ npm install
 ```
 
 ### 3. Create the Bot in the Discord Developer Portal
-- Go to the [Discord Developer Portal](https://discord.com/developers/applications) and click **New Application**.  
-- Give your application a name and click **Create**.  
-- Navigate to the **Bot** tab and click **Add Bot**.  
-- Enable **MESSAGE CONTENT INTENT** under "Privileged Gateway Intents".  
-- Click **Reset Token** to reveal your bot's token and copy it.  
+- Go to the [Discord Developer Portal](https://discord.com/developers/applications) and click **New Application**.
+- Give your application a name and click **Create**.
+- Navigate to the **Bot** tab and click **Add Bot**.
+- Under the Privileged Gateway Intents section, enable the following:
+  - **MESSAGE CONTENT INTENT**: Allows your bot to read the content of messages.
+- Click **Reset Token** to reveal your bot's token and copy it for the next step.
 
 ### 4. Configure Your Bot Token
 Create a new file in the root of your project folder called `config.json`:
@@ -58,32 +59,35 @@ Create a new file in the root of your project folder called `config.json`:
 }
 ```
 
-⚠️ **Important:** Add `config.json` to your `.gitignore` file to prevent your token from being uploaded to GitHub.  
+⚠️ **Important**: Add `config.json` to your `.gitignore` file to prevent your token from being accidentally uploaded to GitHub.
 
 ### 5. Invite the Bot to Your Server
-- In the Developer Portal, go to the **OAuth2** tab → **URL Generator**.  
-- Select the **bot** scope.  
-- Under "Bot Permissions", select:  
-  - Send Messages  
-  - Connect  
-  - Speak  
-- Copy the generated URL, paste it into your browser, and invite the bot to your server.  
+- In the Developer Portal, go to the **OAuth2** tab → **URL Generator**.
+- Select the **bot** scope.
+- Under "Bot Permissions", select the following permissions:
+  - **Send Messages**
+  - **Connect** (Allows the bot to join voice channels)
+  - **Speak** (Allows the bot to play audio)
+- Copy the generated URL, paste it into your browser, and invite the bot to your desired server.
 
 ---
 
 ## Usage
 
 ### Play a Song
-Join a voice channel and type:
+To play a song, you must first be in a voice channel. Then, type the following command in a text channel:
+
 ```
 #play <youtube_url>
 ```
+
 Example:
 ```
 #play https://www.youtube.com/watch?v=dQw4w9WgXcQ
 ```
 
 ### Stop the Music
+To stop the music and have the bot leave the voice channel, use the command:
 ```
 #stop
 ```
@@ -91,20 +95,23 @@ Example:
 ---
 
 ## Running the Bot
+To start your bot, run this command in your terminal from the project's root directory:
+
 ```bash
 node index.js
 ```
 
 If everything is configured correctly, your terminal will display:
+
 ```
 Bot is online!
 ```
-and the bot will appear as online in your Discord server.  
+
+and the bot will appear as online in your Discord server.
 
 ---
 
 ## License
-
 This project is licensed under the MIT License.
 
 ```
@@ -113,7 +120,20 @@ MIT License
 Copyright (c) 2025 Derek-G1
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files...
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
-
