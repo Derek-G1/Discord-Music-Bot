@@ -1,26 +1,19 @@
 {
   "name": "discord-music-bot",
-  "version": "1.0.0",
-  "description": "This is a Music bot for discord",
+  "version": "2.0.0",
+  "description": "A music bot for Discord",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xLaoztu/Discord-Music-Bot.git"
+    "start": "node index.js"
   },
   "author": "Derek G",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xLaoztu/Discord-Music-Bot/issues"
-  },
-  "homepage": "https://github.com/xLaoztu/Discord-Music-Bot#readme",
   "dependencies": {
-    "@discordjs/opus": "^0.3.3",
-    "discord-ytdl-core": "^4.1.3",
-    "discord.js": "^12.4.1",
-    "ffmpeg-static": "^4.2.7",
-    "shelljs": "^0.8.4"
+    "@discordjs/opus": "^0.9.0",
+    "@discordjs/voice": "^0.16.1",
+    "@distube/ytdl-core": "^4.11.11",
+    "discord.js": "^14.13.0",
+    "ffmpeg-static": "^5.2.0",
+    "sodium-native": "^4.0.4"
   }
 }
